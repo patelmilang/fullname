@@ -66,7 +66,7 @@ const DispayName = ({firstname,lastname}) =>{
     
 return (<>
  <div>
-    Full Name : {firstname} {lastname}
+ Full Name: {firstname} {lastname}
 </div> 
  
 </>)
