@@ -37,7 +37,7 @@ const Fullname = () => {
          }));
     }
   return (
-    <form>
+    <form onSubmit={handleSumbmit}>
         <h2>Full Name Display</h2>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ display: "flex" }}>
@@ -50,7 +50,7 @@ const Fullname = () => {
           <input type="text" name="LastName" value={formdata.LastName} onChange={handleChange} required />
         </div>
         <div style={{ display: "flex" }}>
-           <button  type="submit"  onClick={handleSumbmit} >Submit</button> 
+           <button  type="submit" >Submit</button> 
         </div>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {showName==true ? 
