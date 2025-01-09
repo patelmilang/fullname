@@ -40,12 +40,12 @@ const Fullname = () => {
     <form>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ display: "flex" }}>
-          <label>FirstName</label>
+          <label>First Name : </label>
           <input type="text" name="FirstName"  value={formdata.FirstName}
              onChange={handleChange} required  />
         </div>
         <div style={{ display: "flex" }}>
-          <label>LastName</label>
+          <label>Last Name : </label>
           <input type="text" name="LastName" value={formdata.LastName} onChange={handleChange} required />
         </div>
         <div style={{ display: "flex" }}>
@@ -63,7 +63,7 @@ const DispayName = ({firstname,lastname}) =>{
     
 return (<>
  <div style={{display:"flex"}}>
-    Full name : {firstname} {lastname}
+    Full Name : {firstname} {lastname}
 </div> 
  
 </>)
