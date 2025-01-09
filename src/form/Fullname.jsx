@@ -37,27 +37,29 @@ const Fullname = () => {
          }));
     }
   return (
-    <form onSubmit={handleSumbmit}>
-        <h2>Full Name Display</h2>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <div style={{ display: "flex" }}>
-          <label>First Name : </label>
-          <input type="text" name="FirstName"  value={formdata.FirstName}
-             onChange={handleChange} required  />
-        </div>
-        <div style={{ display: "flex" }}>
-          <label>Last Name : </label>
-          <input type="text" name="LastName" value={formdata.LastName} onChange={handleChange} required />
-        </div>
-        <div style={{ display: "flex" }}>
-           <button  type="submit" >Submit</button> 
-        </div>
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        {showName==true ? 
-        (<DispayName firstname={formdata.FirstName} lastname={formdata.LastName}></DispayName>)
-        :(<></>)}
-      </div>
-    </form>
+    <><form onSubmit={handleSumbmit}>
+          <h2>Full Name Display</h2>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ display: "flex" }}>
+                  <label>First Name : </label>
+                  <input type="text" name="FirstName" value={formdata.FirstName}
+                      onChange={handleChange} required />
+              </div>
+              <div style={{ display: "flex" }}>
+                  <label>Last Name : </label>
+                  <input type="text" name="LastName" value={formdata.LastName} onChange={handleChange} required />
+              </div>
+              <div style={{ display: "flex" }}>
+                  <button type="submit">Submit</button>
+              </div>
+              {error && <p style={{ color: "red" }}>{error}</p>}
+
+          </div>
+      </form> 
+              {showName === true ?
+                  (<DispayName firstname={formdata.FirstName} lastname={formdata.LastName}></DispayName>)
+                  : (<></>)}
+           </>
   );
 };
 const DispayName = ({firstname,lastname}) =>{
