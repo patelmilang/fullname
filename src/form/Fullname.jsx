@@ -65,7 +65,7 @@ const Fullname = () => {
 const DispayName = ({firstname,lastname}) =>{
     
 return (<>
- <div style={{display:"flex"}}>
+ <div>
     Full Name : {firstname} {lastname}
 </div> 
  
