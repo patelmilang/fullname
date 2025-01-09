@@ -38,6 +38,7 @@ const Fullname = () => {
     }
   return (
     <form>
+        <h2>Full Name Display</h2>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ display: "flex" }}>
           <label>First Name : </label>
@@ -49,7 +50,7 @@ const Fullname = () => {
           <input type="text" name="LastName" value={formdata.LastName} onChange={handleChange} required />
         </div>
         <div style={{ display: "flex" }}>
-           <button id="btnSave" type="button" value="Submit"   onClick={handleSumbmit} >Submit</button> 
+           <button  type="submit"  onClick={handleSumbmit} >Submit</button> 
         </div>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {showName==true ? 
